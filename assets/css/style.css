@@ -97,7 +97,7 @@ h1, h2, h3, h4, h5, h6 {
 
 #topbar .cta a {
   color: #fff;
-  background: #ff5821;
+  background: #25D366;
   padding: 8px 20px;
   display: inline-block;
   transition: 0.3s;
@@ -488,6 +488,7 @@ section {
   font-weight: 500;
   margin-bottom: 20px;
   padding-bottom: 0;
+  padding-top: 30px;
   font-family: "Poppins", sans-serif;
   color: #635551;
 }
