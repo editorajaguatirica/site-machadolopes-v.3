@@ -10,33 +10,35 @@
       <div class="row">
 
         <div class="col-lg-4  col-md-6 d-flex align-items-stretch" data-aos="fade-up">
+         {% for post in site.posts %}
           <article class="entry">
 
             <div class="entry-img">
-              <img src="assets/img/blog-1.jpg" alt="" class="img-fluid">
+              <img src="{{image}}" alt="" class="img-fluid">
             </div>
 
             <h2 class="entry-title">
-              <a href="garantia_estendida.markdown">Vale a pena comprar garantia estendida ?</a>
+              <a href="{{post.url}}">Vale a pena comprar garantia estendida ?</a>
             </h2>
 
             <div class="entry-meta">
               <ul>
-                <li class="d-flex align-items-center"><i class="icofont-user"></i> <a href="blog-single.html">John Doe</a></li>
-                <li class="d-flex align-items-center"><i class="icofont-wall-clock"></i> <a href="blog-single.html"><time datetime="2020-01-01">Jan 1, 2020</time></a></li>
+                <li class="d-flex align-items-center"><i class="icofont-user"></i> <a href="blog-single.html">{{author}}</a></li>
+                <li class="d-flex align-items-center"><i class="icofont-wall-clock"></i> <a href="blog-single.html">{{post.date}}</a></li>
               </ul>
             </div>
 
             <div class="entry-content">
               <p>
-                Similique neque nam consequuntur ad non maxime aliquam quas. Quibusdam animi praesentium. Aliquam et laboriosam eius aut nostrum quidem aliquid dicta zena prista maraeda talan mas indera.
+                {{post.excerpt}}
               </p>
               <div class="read-more">
-                <a href="blog-single.html">Read More</a>
+                <a href="{{post.url}}">Leia mais</a>
               </div>
             </div>
 
           </article><!-- End blog entry -->
+          {% endfor %}
         </div>
 
         <div class="col-lg-4  col-md-6 d-flex align-items-stretch" data-aos="fade-up">
